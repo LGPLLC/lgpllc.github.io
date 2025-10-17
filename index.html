@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LGP LLC — Design & Engineering</title>
+
+  <!-- Fonts (strong, classy) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Optional external stylesheet if you want to move styles out later -->
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+
+  <!-- 3D model viewer support (for the homepage demo card) -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <style>
+    :root{
+      /* Core palette */
+      --red-900: #5a0000;      /* page background */
+      --red-950: #2e0000;      /* deep red bars / footer */
+      --ink:     #0a0a0a;      /* near-black text */
+      --paper:   #f4efe9;      /* light card */
+      --note:    #e8e1db;      /* note background */
+      --blue:    #1e90ff;      /* button border/accent */
+      --ring:    rgba(0,0,0,.18);
+      --shadow:  0 14px 40px rgba(0,0,0,.35);
+      --r:       18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,var(--red-900),#4b0000);
+      color:var(--ink);
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      line-height:1.55;
+      font-weight:700; /* bold by default as requested */
+    }
+
+    /* Layout */
+    .container{max-width:1120px; margin:auto; padding:22px}
+    header{
+      position:sticky; top:0; z-index:40;
+      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.15));
+      border-bottom:1px solid rgba(0,0,0,.5);
+      backdrop-filter: blur(8px);
+    }
+    .bar{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{
+      width:40px; height:40px; border-radius:14px;
+      background:radial-gradient(72% 72% at 30% 30%, #7a0a0a 0%, #320000 100%);
+      box-shadow: inset 0 0 0 2px rgba(0,0,0,.45), inset 0 0 18px rgba(255,255,255,.12);
+    }
+    .title{font-family:Cinzel, serif; letter-spacing:.6px; font-size:22px; color:#111}
+
+    nav{display:flex; gap:10px; flex-wrap:wrap}
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:11px 16px; border-radius:14px;
+      border:2px solid var(--blue);              /* BLUE BORDER */
+      background:linear-gradient(180deg,#1a1a1a,#000);
+      color:#fff; text-decoration:none; box-shadow:var(--shadow);
+      transition: transform .05s ease, box-shadow .2s ease;
+      font-weight:800;
+    }
+    .btn:hover{box-shadow:0 0 0 3px rgba(30,144,255,.25), var(--shadow)}
+    .btn:active{transform:translateY(1px)}
+
+    .hero{padding:54px 0 24px}
+    h1,h2,h3{margin:0 0 10px; font-family:Cinzel, serif; color:#111}
+    h1{font-size:46px}
+    h2{font-size:32px}
+    .tag{color:#111; opacity:.9}
+
+    /* Red bar headings for sections */
+    .redbar{
+      display:inline-block;
+      background:linear-gradient(180deg, #7b0000, var(--red-950));
+      color:#111; padding:10px 16px; border-radius:12px;
+      border:1px solid rgba(0,0,0,.6); box-shadow:var(--shadow)
+    }
+
+    /* Cards + grid */
+    .section{margin:26px 0}
+    .card{
+      background:var(--paper); border:1px solid var(--ring);
+      border-radius:var(--r); padding:22px; box-shadow:var(--shadow)
+    }
+    .grid{display:grid; gap:18px}
+    @media(min-width:920px){ .grid.cols-2{ grid-template-columns:repeat(2,1fr) } }
+    @media(min-width:1100px){ .grid.cols-3{ grid-template-columns:repeat(3,1fr) } }
+
+    /* Model viewer frame */
+    model-viewer{width:100%; height:320px; border-radius:14px;
+      background:#efe9e3; border:1px solid var(--ring); box-shadow: inset 0 0 35px rgba(0,0,0,.06)}
+
+    /* Notes callout */
+    .note{
+      margin-top:12px; background:var(--note);
+      border-left:6px solid var(--blue);
+      padding:12px 14px; border-radius:12px; color:#222; font-weight:700;
+    }
+
+    /* Footer */
+    footer{margin-top:40px; background:var(--red-950); border-top:1px solid rgba(0,0,0,.6)}
+    .foot{max-width:1120px; margin:auto; padding:18px 22px; color:#111; display:flex; justify-content:space-between; flex-wrap:wrap}
+
+    /* Links on dark backgrounds */
+    a.text{color:#c8ddff; text-underline-offset:3px}
+  </style>
+</head>
+<body>
+  <!-- HEADER / NAV -->
+  <header>
+    <div class="container bar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="title">LGP LLC</div>
+      </div>
+      <nav>
+        <a class="btn" href="#capability">Capability</a>
+        <a class="btn" href="#portfolio">Portfolio</a>
+        <a class="btn" href="#orders">Orders</a>
+        <a class="btn" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <h1 class="redbar">Lilian Grace Parkin LLC</h1>
+      <p class="tag">Precision. Vision. Engineering. — Where your problems become our solutions.</p>
+
+      <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
+        <a class="btn" href="#orders">Buy / Hire</a>
+        <a class="btn" href="#portfolio">See Work</a>
+      </div>
+
+      <div class="note">
+        <strong>Notes:</strong> Add a one-sentence value promise (e.g., “Functional prototypes to production-ready parts in nylon/CF, ASA, and PC. Fast.”). This helps first-time visitors understand your edge.
+      </div>
+    </section>
+
+    <!-- CAPABILITY -->
+    <section id="capability" class="section">
+      <h2 class="redbar">Capability</h2>
+      <div class="card">
+        Electro-mechanical machine design · 3-D printing (PLA, ABS, ASA, PC, Nylon/CF) ·
+        light forging/casting · woodworking · prototyping to small-batch production.
+        <div class="note">
+          <strong>Notes:</strong> Consider listing typical tolerances, max build sizes, and turnaround windows. Buyers love concrete constraints.
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO PREVIEW -->
+    <section id="portfolio" class="section">
+      <h2 class="redbar">Portfolio (Preview)</h2>
+      <p style="color:#111;margin:.3rem 0 1rem">Click through for specs, pricing, and ordering.</p>
+      <div class="grid cols-2">
+        <!-- War Cane -->
+        <article class="card">
+          <h3>War Cane</h3>
+          <model-viewer src="Assets/Models/war-cane.glb"
+                        poster="Assets/Images/war-cane.jpg"
+                        camera-controls shadow-intensity="1"
+                        ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
+          <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap">
+            <a class="btn" href="Portfolio/Warcane.html">Details</a>
+            <a class="btn" href="#orders">Order</a>
+          </div>
+        </article>
+
+        <!-- Console Cover -->
+        <article class="card">
+          <h3>Console Cover</h3>
+          <model-viewer src="Assets/Models/console-cover.glb"
+                        poster="Assets/Images/console-cover.jpg"
+                        camera-controls shadow-intensity="1"></model-viewer>
+          <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap">
+            <a class="btn" href="Portfolio/Consolecover.html">Details</a>
+            <a class="btn" href="#orders">Order</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="note">
+        <strong>Notes:</strong> Replace the poster/model paths with your actual filenames in <code>Assets/Images</code> and <code>Assets/Models</code>. Add more cards or keep the homepage tight and let each item’s page carry the depth.
+      </div>
+    </section>
+
+    <!-- ORDERS / SERVICE -->
+    <section id="orders" class="section">
+      <h2 class="redbar">Orders & Service</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Purchase Existing Design</h3>
+          <p>Pay securely via PayPal or use Zelle. Include the project name in the memo.</p>
+          <div id="paypal-home" style="margin:10px 0"></div>
+          <button class="btn" onclick="document.getElementById('zelle').showModal()">Pay with Zelle</button>
+
+          <div class="note" style="margin-top:12px">
+            <strong>Notes:</strong> In <code>Payments/paypal.js</code> you can define products/SKUs and render buttons per item. On product pages, pass the specific price/description.
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Hire Design Service</h3>
+          <form action="https://formspree.io/f/your_endpoint" method="POST" style="display:grid; gap:10px">
+            <input name="name" placeholder="Name" required style="padding:12px; border-radius:12px; border:2px solid var(--blue)">
+            <input name="email" type="email" placeholder="Email" required style="padding:12px; border-radius:12px; border:2px solid var(--blue)">
+            <textarea name="message" rows="5" placeholder="Describe the part, material, and timeline" style="padding:12px; border-radius:12px; border:2px solid var(--blue)"></textarea>
+            <button class="btn" type="submit">Email Request</button>
+          </form>
+          <p style="margin-top:8px">Prefer direct email? <a class="text" href="mailto:jrp001@lgparkin.org">jrp001@lgparkin.org</a></p>
+
+          <div class="note">
+            <strong>Notes:</strong> Swap the Formspree endpoint for your real one, or replace with EmailJS if you want everything to stay on-page.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2 class="redbar">Contact</h2>
+      <div class="card">
+        <p><strong>Email:</strong> <a class="text" href="mailto:jrp001@lgparkin.org">jrp001@lgparkin.org</a></p>
+        <p><strong>Phone:</strong> <a class="text" href="tel:+12084779204">208-477-9204</a></p>
+        <div class="note">
+          <strong>Notes:</strong> Consider office hours and typical response time to set expectations.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="foot">
+      <span>© <span id="y"></span> LGP LLC · All rights reserved.</span>
+      <span>Built for GitHub Pages</span>
+    </div>
+  </footer>
+
+  <!-- PayPal loader and shared renderer -->
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
+  <script src="Payments/paypal.js"></script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    if (window.renderPayPal) {
+      // Homepage general-purpose button; product pages can render specific SKUs.
+      renderPayPal('#paypal-home', { price: '99.00', description: 'LGP LLC — Existing Design (homepage quick buy)' });
+    }
+  </script>
+
+  <!-- Zelle modal -->
+  <dialog id="zelle" style="border:none; border-radius:20px; padding:0; max-width:520px">
+    <div style="background:var(--paper); padding:22px; border-radius:20px">
+      <div class="bar" style="justify-content:space-between; margin-bottom:8px">
+        <div class="brand"><div class="logo"></div><div class="title">Zelle</div></div>
+        <form method="dialog"><button class="btn">Close</button></form>
+      </div>
+      <img src="Assets/Images/zelle-qr.png" alt="Zelle QR" style="max-width:100%; height:auto; border-radius:12px; border:1px solid var(--ring)">
+      <p><strong>Recipient:</strong> jrp001@lgparkin.org</p>
+      <p><strong>Memo:</strong> Include project name (e.g., “War Cane”).</p>
+    </div>
+  </dialog>
+</body>
+</html>

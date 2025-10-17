@@ -1,0 +1,10 @@
+/* Header Logo Image Styling */
+.logo-img {
+  height: 48px;               /* Adjust for your header size */
+  width: auto;
+  border-radius: 12px;        /* Optional rounding */
+  box-shadow: 0 0 8px rgba(0,0,0,0.6); /* Subtle depth effect */
+  object-fit: contain;
+  background-color: #2e0000;  /* Matches your red header tone */
+  padding: 4px;               /* Keeps spacing inside dark headers */
+}

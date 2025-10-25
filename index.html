@@ -19,14 +19,14 @@
 
   <style>
     :root{
-      /* Core palette */
-      --red-900: hwb(0 0% 19%);      /* page background */
-      --red-950: lab(39.77% 63.54 51.39);      /* deep red bars / footer */
-      --ink:     #0a0a0a;      /* near-black text */
-      --paper:   #f4efe9;      /* light card */
-      --note:    hwb(9 93% 4%);      /* note background */
-      --blue:    hsl(210, 95%, 29%);      /* button border/accent */
-      --ring:    rgba(0,0,0,.18);
+      /* Core palette (Refined Garnet) */
+      --red-900: #3a0808;      /* page background */
+      --red-950: #500b0b;      /* deep red bars / footer */
+      --ink:     #0b0b0b;      /* near-black text */
+      --paper:   #f6f3ef;      /* light card */
+      --note:    #fdecee;      /* note background */
+      --blue:    #1e90ff;      /* button border/accent */
+      --ring:    rgba(30,144,255,0.12);
       --shadow:  0 14px 40px rgba(0,0,0,.35);
       --r:       18px;
     }
@@ -34,7 +34,7 @@
     html,body{height:100%}
     body{
       margin:0;
-      background:linear-gradient(180deg,var(--red-900),#4b0000);
+      background:linear-gradient(180deg,var(--red-900),#500b0b);
       color:var(--ink);
       font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
       line-height:1.55;
@@ -53,7 +53,7 @@
     .brand{display:flex; align-items:center; gap:12px}
     .logo{
       width:40px; height:40px; border-radius:14px;
-      background:radial-gradient(72% 72% at 30% 30%, #7a0a0a 0%, #320000 100%);
+      background:radial-gradient(72% 72% at 30% 30%, #9b1a1a 0%, #3a0808 100%);
       box-shadow: inset 0 0 0 2px rgba(0,0,0,.45), inset 0 0 18px rgba(255,255,255,.12);
     }
     .title{font-family:Cinzel, serif; letter-spacing:.6px; font-size:22px; color:#111}

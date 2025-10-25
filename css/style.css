@@ -5,6 +5,6 @@
   border-radius: 12px;        /* Optional rounding */
   box-shadow: 0 0 8px rgba(0,0,0,0.6); /* Subtle depth effect */
   object-fit: contain;
-  background-color: #2e0000;  /* Matches your red header tone */
+    background-color: #3a0808;  /* Refined Garnet header tone */
   padding: 4px;               /* Keeps spacing inside dark headers */
 }

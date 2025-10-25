@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Console Cover — LGP LLC</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <style>
+    /* Page-specific helpers (palette is provided by css/style.css) */
+    body{background:linear-gradient(180deg,var(--red-900),var(--red-950)); color:var(--ink); font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;}
+    .container{max-width:1120px;margin:auto;padding:22px}
+    .back{display:inline-block;margin-bottom:14px;color:#fff;text-decoration:none;padding:8px 12px;border-radius:10px;background:rgba(0,0,0,.25)}
+    .gallery{display:grid;grid-template-columns:1fr;gap:12px}
+    @media(min-width:900px){.gallery{grid-template-columns:2fr 1fr}}
+    .thumbs{display:flex;flex-direction:column;gap:8px}
+    .specs{background:var(--paper);padding:18px;border-radius:14px;border:1px solid var(--ring);box-shadow:var(--shadow)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container bar">
+      <div class="brand">
+        <a href="../index.html"><img src="../Assets/Images/LilShield2.jpeg" alt="LGP LLC badge" class="logo-img"></a>
+        <div class="title">LGP LLC</div>
+      </div>
+      <nav>
+        <a class="btn" href="../index.html#portfolio">Back to Portfolio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <a class="back" href="../index.html">← Back to home</a>
+
+    <h1 class="redbar">Console Cover</h1>
+    <p class="tag">Custom dash console cover designed for protection and a clean aesthetic.</p>
+
+    <div class="gallery" style="margin-top:16px">
+      <div>
+        <model-viewer src="../Assets/Models/DashCover-16TigeR22.glb"
+                      poster="../Assets/Images/DashCover-16Tige'R22frontopen.jpg"
+                      camera-controls shadow-intensity="1" style="width:100%;height:520px;border-radius:12px;background:#efe9e3;border:1px solid var(--ring)"></model-viewer>
+      </div>
+      <aside class="thumbs">
+        <img src="../Assets/Images/DashCover-16Tige'R22frontopen.jpg" alt="Console Cover" style="width:100%;border-radius:10px;border:1px solid var(--ring)">
+        <div class="specs">
+          <h3>Specifications</h3>
+          <ul>
+            <li>Material: ABS/ASA blend for UV durability</li>
+            <li>Finish: Textured or smooth; color matched</li>
+            <li>Fitment: Designed for specific console shapes — provide measurements</li>
+            <li>Delivery: Prototype → approval → small-batch production</li>
+          </ul>
+          <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
+            <a class="btn" href="../index.html#orders">Order</a>
+            <a class="btn" href="#contact">Request Quote</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <section style="margin-top:18px" class="card">
+      <h2>Details</h2>
+      <p>This dash cover is designed for a snug fit and easy installation. It protects controls while maintaining access to key features.</p>
+      <h3 style="margin-top:12px">Options & notes</h3>
+      <ul>
+        <li>Material and finish tailored to vehicle interior</li>
+        <li>Prototyping available for fit verification</li>
+        <li>Provide exact console dimensions and mounting points</li>
+      </ul>
+      <div id="paypal-product" style="margin:16px 0"></div>
+      <div id="contact" style="margin-top:8px">
+        <h3>Contact / Customization</h3>
+        <p>For custom requests, email <a class="text" href="mailto:jrp001@lgparkin.org">jrp001@lgparkin.org</a> with your requirements, or use the order form on the homepage.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <span>© <span id="y"></span> LGP LLC · All rights reserved.</span>
+      <span>Built for GitHub Pages</span>
+    </div>
+  </footer>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
+  <script src="../Payments/paypal.js"></script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    if (window.renderPayPal) {
+      renderPayPal('#paypal-product', { price: '89.00', description: 'Console Cover — LGP LLC' });
+    }
+  </script>
+</body>
+</html>

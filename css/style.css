@@ -11,27 +11,28 @@
 
 /* Site core variables and layout (moved from inline styles in index.html) */
 :root{
-  /* Core palette (Refined Garnet) */
-  --red-900: #3a0808;      /* page background */
-  --red-950: #500b0b;      /* deep red bars / footer */
-  --ink:     #0b0b0b;      /* near-black text */
-  --paper:   #f6f3ef;      /* light card */
-  --note:    #fdecee;      /* note background */
-  --blue:    #1e90ff;      /* button border/accent */
-  --ring:    rgba(30,144,255,0.12);
-  --shadow:  0 14px 40px rgba(0,0,0,.35);
-  --r:       18px;
+  /* Mobile-friendly Option 1: Light, High-Contrast */
+  --red-900: #800b12;   /* red for bar backgrounds */
+  --red-950: #5a0709;   /* darker red for accents/footer */
+  --ink:     #0b0b0b;   /* primary text (very dark) */
+  --paper:   #ffffff;   /* page & card backgrounds (white) */
+  --note:    #fff4f5;   /* subtle red-tinted note background */
+  --blue:    #0b6ef6;   /* CTA/button color */
+  --ring:    rgba(11,110,246,0.12);
+  --shadow:  0 10px 30px rgba(0,0,0,0.08);
+  --r:       14px;
 }
 
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
   margin:0;
-  background:linear-gradient(180deg,var(--red-900),var(--red-950));
+  background:var(--paper);
   color:var(--ink);
   font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
   line-height:1.55;
   font-weight:700; /* bold by default as requested */
+  font-size:16px; /* improve mobile readability */
 }
 
 /* Layout */
@@ -46,22 +47,22 @@ header{
 .brand{display:flex; align-items:center; gap:12px}
 .logo{
   width:40px; height:40px; border-radius:14px;
-  background:radial-gradient(72% 72% at 30% 30%, #9b1a1a 0%, #3a0808 100%);
-  box-shadow: inset 0 0 0 2px rgba(0,0,0,.45), inset 0 0 18px rgba(255,255,255,.12);
+  background:radial-gradient(72% 72% at 30% 30%, #bf2028 0%, var(--red-900) 100%);
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,.12), inset 0 0 8px rgba(255,255,255,.06);
 }
 .title{font-family:Cinzel, serif; letter-spacing:.6px; font-size:22px; color:#111}
 
 nav{display:flex; gap:10px; flex-wrap:wrap}
 .btn{
   display:inline-flex; align-items:center; gap:8px;
-  padding:11px 16px; border-radius:14px;
+  padding:12px 18px; min-height:44px; border-radius:12px;
   border:2px solid transparent;              /* filled CTA style */
-  background:linear-gradient(180deg,var(--blue), #0f78df);
+  background:linear-gradient(180deg,var(--blue), #0a63c6);
   color:#fff; text-decoration:none; box-shadow:var(--shadow);
   transition: transform .05s ease, box-shadow .12s ease, filter .12s ease;
   font-weight:800;
 }
-.btn:hover{box-shadow:0 0 0 6px rgba(30,144,255,.08), var(--shadow); filter:brightness(.98)}
+.btn:hover{box-shadow:0 0 0 6px rgba(11,110,246,.08), var(--shadow); filter:brightness(.98)}
 .btn:active{transform:translateY(1px)}
 .btn:focus{outline:3px solid rgba(30,144,255,.18); outline-offset:3px}
 
@@ -74,9 +75,9 @@ h2{font-size:32px}
 /* Red bar headings for sections */
 .redbar{
   display:inline-block;
-  background:linear-gradient(180deg, #7b0000, var(--red-950));
+  background:linear-gradient(180deg,var(--red-900), var(--red-950));
   color:#fff; padding:10px 16px; border-radius:12px;
-  border:1px solid rgba(0,0,0,.6); box-shadow:var(--shadow)
+  border:1px solid rgba(0,0,0,.06); box-shadow:var(--shadow)
 }
 
 /* Cards + grid */
@@ -91,7 +92,7 @@ h2{font-size:32px}
 
 /* Model viewer frame */
 model-viewer{width:100%; height:320px; border-radius:14px;
-  background:var(--paper); border:1px solid var(--ring); box-shadow: inset 0 0 35px rgba(0,0,0,.06)}
+  background:var(--paper); border:1px solid var(--ring); box-shadow: inset 0 0 18px rgba(0,0,0,.04)}
 
 /* Notes callout */
 .note{

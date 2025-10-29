@@ -119,3 +119,89 @@ a.text{color:#c8ddff; text-underline-offset:3px}
 @media(min-width:900px){.product-gallery{grid-template-columns:2fr 1fr}}
 .thumbs{display:flex;flex-direction:column;gap:8px}
 .specs{background:var(--paper);padding:18px;border-radius:14px;border:1px solid var(--ring);box-shadow:var(--shadow)}
+
+
+/* Scrollable image gallery container */
+.gallery-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/* Horizontal scroll strip */
+.image-gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  scrollbar-width: thin;
+}
+
+.image-gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.image-gallery::-webkit-scrollbar-thumb {
+  background-color: #a00;
+  border-radius: 4px;
+}
+
+/* Individual image cards */
+.image-slide {
+  flex: 0 0 auto;
+  text-align: center;
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-slide:hover {
+  transform: scale(1.05);
+}
+
+.image-slide img {
+  max-width: 280px;
+  border-radius: 8px;
+}
+
+.image-slide p {
+  font-size: 0.9em;
+  color: #333;
+  margin-top: 6px;
+}
+
+/* Scroll buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(64, 0, 0, 0.85);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 28px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  z-index: 2;
+}
+
+.scroll-btn:hover {
+  background-color: #a00;
+}
+
+.scroll-btn.left {
+  left: 5px;
+}
+
+.scroll-btn.right {
+  right: 5px;
+}

@@ -89,13 +89,8 @@
             <h3>Pricing & Payment Options</h3>
             <p><strong>Contact for Quote</strong> - Pricing varies based on customization and finish options.</p>
             
-            <div style="margin:16px 0">
-              <h4>Pay with PayPal</h4>
-              <div id="paypal-product" style="margin:12px 0"></div>
-            </div>
-            
-            <div style="margin:16px 0; padding:16px; background:var(--note); border-radius:8px;">
-              <h4 style="margin-top:0;">Pay with Zelle</h4>
+            <div style="margin:16px 0; padding:16px; background:#e8f4f8; border:2px solid var(--blue); border-radius:8px;">
+              <h4 style="margin-top:0; color:var(--blue);">✅ Pay with Zelle (Recommended)</h4>
               <p style="margin:8px 0;"><strong>📱 How to pay with Zelle:</strong></p>
               <ol style="margin:8px 0; padding-left:20px;">
                 <li>Open your banking app or Zelle app</li>
@@ -105,11 +100,24 @@
                 <li>In the memo/note field, include: <strong>"Tigé R22 Dash Cover"</strong> and your name</li>
                 <li>Review and send payment</li>
               </ol>
-              <p style="margin:8px 0;"><em>We'll contact you within 24 hours to confirm your order and discuss customization details.</em></p>
+              <p style="margin:8px 0;"><em>Fast, secure, and instant confirmation. We'll contact you within 24 hours to discuss customization details.</em></p>
+            </div>
+            
+            <div style="margin:16px 0; padding:16px; background:var(--note); border-radius:8px;">
+              <h4 style="margin-top:0;">💳 Pay with PayPal</h4>
+              <p style="margin:8px 0;">Send payment securely through PayPal:</p>
+              <p style="margin:12px 0;">
+                <a href="mailto:JRP001@lgparkin.org?subject=Tige%20R22%20Dash%20Cover%20Order" 
+                   class="btn" 
+                   style="display:inline-block; text-decoration:none; background:var(--blue); color:white; padding:12px 24px; border-radius:8px; font-weight:700;">
+                  Request PayPal Invoice
+                </a>
+              </p>
+              <p style="margin:8px 0; font-size:14px;"><em>We'll send you a PayPal invoice with your selected configuration and pricing.</em></p>
             </div>
             
             <div style="margin:16px 0">
-              <h4>Custom Quote</h4>
+              <h4>📧 Custom Quote</h4>
               <p>For custom configurations and exact pricing, contact us:</p>
               <p>
                 <strong>Email:</strong> <a href="mailto:JRP001@lgparkin.org">JRP001@lgparkin.org</a><br>
@@ -132,27 +140,8 @@
     </div>
   </footer>
 
-  <script src="https://www.paypal.com/sdk/js?client-id=AQGThJhFqqBw-y-LIi9WTLhxBqRSmDGOFGs5sRzCQ216IKWF5Pzd8ArV3eoUuwoTO9qCxa7Po_KBoUp0&currency=USD"></script>
-  <script src="../Payments/paypal.js"></script>
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
-    if (window.renderPayPal) {
-      renderPayPal('#paypal-product', { 
-        price: '350.00', 
-        description: 'Tigé R22 Dash Cover - Custom Marine Fabrication',
-        productOptions: {
-          label: 'Style & Finish',
-          choices: [
-            { name: 'Eyebrow Style - Textured', price: '350.00' },
-            { name: 'Eyebrow Style - Smooth', price: '375.00' },
-            { name: 'Left-Opening Lid - Textured', price: '425.00' },
-            { name: 'Left-Opening Lid - Smooth', price: '450.00' },
-            { name: 'Vertical-Opening Lid - Textured', price: '475.00' },
-            { name: 'Vertical-Opening Lid - Smooth', price: '500.00' }
-          ]
-        }
-      });
-    }
   </script>
 </body>
 </html>

@@ -36,14 +36,16 @@ function renderPayPal(selector, options) {
     container.innerHTML = optionsHTML;
     
     // Update button container reference
-    const buttonContainer = document.querySelector(`${selector}-button`);
+    const buttonContainerId = `${selector.replace('#', '')}-button`;
+    const buttonContainer = document.getElementById(buttonContainerId);
     renderButton(buttonContainer, config, true);
     
     // Add change listener to update price
     document.getElementById('product-option').addEventListener('change', (e) => {
       const newPrice = e.target.value;
-      buttonContainer.innerHTML = ''; // Clear old button
-      renderButton(buttonContainer, { ...config, price: newPrice }, true);
+      const buttonContainerElement = document.getElementById(buttonContainerId);
+      buttonContainerElement.innerHTML = ''; // Clear old button
+      renderButton(buttonContainerElement, { ...config, price: newPrice }, true);
     });
   } else {
     // No options, render button directly

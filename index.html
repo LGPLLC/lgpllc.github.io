@@ -85,8 +85,7 @@
                         camera-controls shadow-intensity="1"
                         ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
           <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap">
-            <a class="btn" href="Portfolio/Warcane.html">Details</a>
-            <a class="btn" href="#orders">Order</a>
+            <a class="btn" href="Portfolio/Warcane.html">View Details</a>
           </div>
         </article>
 
@@ -97,8 +96,7 @@
                         poster="Assets/Images/DashCover-16Tige'R22frontopen.jpg"
                         camera-controls shadow-intensity="1"></model-viewer>
           <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap">
-            <a class="btn" href="Portfolio/Consolecover.html">Details</a>
-            <a class="btn" href="#orders">Order</a>
+            <a class="btn" href="Portfolio/Consolecover.html">View Details</a>
           </div>
         </article>
       </div>
@@ -106,32 +104,22 @@
     <!-- ORDERS / SERVICE -->
     <section id="orders" class="section">
       <h2 class="redbar">Orders & Service</h2>
-      <div class="grid cols-2">
-        <div class="card">
-          <h3>Purchase Existing Design</h3>
-          <p>Pay securely via PayPal or use Zelle. Include the project name in the memo.</p>
-          <div id="paypal-home" style="margin:10px 0"></div>
-          <button class="btn" onclick="document.getElementById('zelle').showModal()">Pay with Zelle</button>
-
-          <div class="note" style="margin-top:12px">
-            <strong>Notes:</strong> In <code>Payments/paypal.js</code> you can define products/SKUs and render buttons per item. On product pages, pass the specific price/description.
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Hire Design Service</h3>
-          <form action="https://formspree.io/f/your_endpoint" method="POST" style="display:grid; gap:10px">
-            <input name="name" placeholder="Name" required style="padding:12px; border-radius:12px; border:2px solid var(--blue)">
-            <input name="email" type="email" placeholder="Email" required style="padding:12px; border-radius:12px; border:2px solid var(--blue)">
-            <textarea name="message" rows="5" placeholder="Describe the part, material, and timeline" style="padding:12px; border-radius:12px; border:2px solid var(--blue)"></textarea>
-            <button class="btn" type="submit">Email Request</button>
-          </form>
-          <p style="margin-top:8px">Prefer direct email? <a class="text" href="mailto:jrp001@lgparkin.org">jrp001@lgparkin.org</a></p>
-
-          <div class="note">
-            <strong>Notes:</strong> Swap the Formspree endpoint for your real one, or replace with EmailJS if you want everything to stay on-page.
-          </div>
-        </div>
+      <div class="card">
+        <h3>How to Order</h3>
+        <p>Visit individual product pages to see detailed specifications and pricing. Payment options include:</p>
+        <ul>
+          <li><strong>PayPal</strong> - Secure payment buttons available on each product page</li>
+          <li><strong>Zelle</strong> - Direct transfer to: <strong>208-477-9204</strong></li>
+          <li><strong>Custom Quote</strong> - Contact us for personalized pricing based on your requirements</li>
+        </ul>
+        
+        <h3 style="margin-top:18px">Custom Design & Fabrication</h3>
+        <p>Need something unique? We offer custom design and fabrication services. Contact us with your project details:</p>
+        <p>
+          <strong>Email:</strong> <a href="mailto:mr.parkin@gmail.com">mr.parkin@gmail.com</a><br>
+          <strong>Phone:</strong> <a href="tel:+12084779204">208-477-9204</a>
+        </p>
+        <p><em>Include material preferences, dimensions, and timeline for fastest response.</em></p>
       </div>
     </section>
 
@@ -159,7 +147,7 @@
   </footer>
 
   <!-- PayPal loader and shared renderer -->
-  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=52RGV5WUUFDDN&currency=USD"></script>
   <script src="Payments/paypal.js"></script>
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
@@ -177,8 +165,8 @@
         <form method="dialog"><button class="btn">Close</button></form>
       </div>
       <img src="Assets/Images/zelle-qr.png" alt="Zelle QR" style="max-width:100%; height:auto; border-radius:12px; border:1px solid var(--ring)">
-      <p><strong>Recipient:</strong> jrp001@lgparkin.org</p>
-      <p><strong>Memo:</strong> Include project name (e.g., “War Cane”).</p>
+      <p><strong>Recipient:</strong> 208-477-9204</p>
+      <p><strong>Memo:</strong> Include project name (e.g., "War Cane").</p>
     </div>
   </dialog>
 </body>

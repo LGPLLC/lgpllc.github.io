@@ -32,7 +32,32 @@
 
   <main class="container">
     <h1 class="redbar">War Cane — Veteran Mobility Concept</h1>
-    <img src="../Assets/Images/WarCaneV2.jpg" alt="War Cane Prototype" style="max-width:100%;border-radius:12px;margin-bottom:18px">
+    
+    <!-- 3D Model Viewer with custom styling -->
+    <div style="margin-bottom:24px;">
+      <model-viewer 
+        src="../Assets/Models/WarCaneV2.glb"
+        poster="../Assets/Images/WarCaneV2.jpg"
+        camera-controls 
+        shadow-intensity="1"
+        ar ar-modes="webxr scene-viewer quick-look"
+        style="width:100%; height:420px; border-radius:14px; background:linear-gradient(135deg, #1a0f0f 0%, #2d1515 50%, #1a0f0f 100%); border:2px solid var(--red-950); box-shadow: inset 0 0 40px rgba(212,29,42,0.1), 0 10px 30px rgba(0,0,0,0.6);"
+        environment-image="neutral">
+      </model-viewer>
+      <p style="font-size:13px; color:var(--ink); opacity:0.7; text-align:center; margin-top:8px;">Interactive 3D Model - Drag to rotate, scroll to zoom</p>
+    </div>
+
+    <!-- Photo Gallery -->
+    <div style="margin-bottom:24px;">
+      <h3>Product Images</h3>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px;">
+        <div style="text-align:center;">
+          <img src="../Assets/Images/WarCaneV2.jpg" alt="War Cane Prototype" style="max-width:100%;border-radius:12px; border:1px solid #333;">
+          <p style="font-size:13px; margin-top:6px; color:var(--ink); opacity:0.8;">War Cane Prototype</p>
+        </div>
+      </div>
+    </div>
+    
     <section class="card">
       <h2>Heavy-Duty Mobility Cane with Advanced Functionality</h2>
       <p>The War Cane is an <strong>adaptive mobility device</strong> engineered for veterans and active individuals who demand superior strength, stability, and versatility. Combining <strong>high-performance materials</strong> with <strong>customizable features</strong>, this heavy-duty walking cane offers enhanced support beyond standard mobility aids.</p>
@@ -68,14 +93,14 @@
       <p><strong>Starting Price:</strong> $600 (base configuration)</p>
       <p><em>Final cost depends on material choice, length, and added features. Contact us for a personalized quote and consultation.</em></p>
       
-      <div style="margin:16px 0; padding:16px; background:#fff4f5; border-left:4px solid var(--red-900); border-radius:4px;">
+      <div style="margin:16px 0; padding:16px; background:var(--note); border-left:4px solid var(--red-900); border-radius:4px;">
         <p style="margin:0; font-weight:700; color:var(--red-900);">📏 Important: Height Measurement Required</p>
         <p style="margin:8px 0 0 0;">When ordering, please provide your <strong>full upright standing height</strong> (measured from floor to top of head). This ensures proper cane length and optimal posture support.</p>
       </div>
       
       <h3 style="margin-top:18px">Payment Options</h3>
       
-      <div style="margin:16px 0; padding:16px; background:#e8f4f8; border:2px solid var(--blue); border-radius:8px;">
+      <div style="margin:16px 0; padding:16px; background:#1a2430; border:2px solid var(--blue); border-radius:8px;">
         <h4 style="margin-top:0; color:var(--blue);">✅ Pay with Zelle (Recommended)</h4>
         <p style="margin:8px 0;"><strong>📱 How to pay with Zelle:</strong></p>
         <ol style="margin:8px 0; padding-left:20px;">

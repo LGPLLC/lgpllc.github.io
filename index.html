@@ -47,37 +47,6 @@
       </div>
     </section>
 
-    <!-- FEATURED PROJECTS GALLERY -->
-    <section class="section" style="margin-top:2rem;">
-      <h2 class="redbar">Featured Projects</h2>
-      <div class="grid cols-2" style="gap:24px;">
-        <div class="card">
-          <img src="Assets/Images/WarCaneV2.jpg" alt="War Cane Prototype" style="max-width:100%;border-radius:12px;">
-          <h3 style="margin-top:10px;">War Cane</h3>
-          <p style="font-size:14px;">Heavy-duty adaptive mobility cane for veterans. Customizable materials and features.</p>
-          <a class="btn" href="Portfolio/Warcane.html">View Details</a>
-        </div>
-        <div class="card">
-          <img src="Assets/Images/DashCover-16Tige'R22frontopen.jpg" alt="Tigé R22 Dash Cover Open" style="max-width:100%;border-radius:12px;">
-          <h3 style="margin-top:10px;">Tigé R22 Dash Cover</h3>
-          <p style="font-size:14px;">Custom marine dash cover for Tigé R22 boats. Multiple styles and finishes available.</p>
-          <a class="btn" href="Portfolio/Consolecover.html">View Details</a>
-        </div>
-        <div class="card">
-          <img src="Assets/Images/DashCover-16Tige'R22frontclosed.jpg" alt="WRX Louvers Concept" style="max-width:100%;border-radius:12px;">
-          <h3 style="margin-top:10px;">WRX Louvers (Concept)</h3>
-          <p style="font-size:14px;">Black Dragon Scale louvers for Subaru WRX. <span style="color:var(--red-900);font-weight:700;">In Development</span> — Preorders available.</p>
-          <a class="btn" href="Portfolio/Louvers.html">View Details</a>
-        </div>
-        <div class="card">
-          <img src="Assets/Images/WarCaneV2.jpg" alt="Welding Adapter Prototype" style="max-width:100%;border-radius:12px;">
-          <h3 style="margin-top:10px;">Welding Wire Spool Adapter</h3>
-          <p style="font-size:14px;">Universal adapter for welding wire spools. Durable, quick-change design.</p>
-          <a class="btn" href="Portfolio/WeldAdapter.html">View Details</a>
-        </div>
-      </div>
-    </section>
-
     <!-- MISSION -->
     <section class="section">
       <h2 class="redbar">Mission</h2>
@@ -114,7 +83,9 @@
           <model-viewer src="Assets/Models/WarCaneV2.glb"
                         poster="Assets/Images/WarCaneV2.jpg"
                         camera-controls shadow-intensity="1"
-                        ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
+                        ar ar-modes="webxr scene-viewer quick-look"
+                        style="background:linear-gradient(135deg, #1a0f0f 0%, #2d1515 50%, #1a0f0f 100%); border:2px solid var(--red-950); box-shadow: inset 0 0 30px rgba(212,29,42,0.1);"
+                        environment-image="neutral"></model-viewer>
           <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap">
             <a class="btn" href="Portfolio/Warcane.html">View Details</a>
           </div>
@@ -125,12 +96,35 @@
           <h3>Tigé R22 Dash Cover</h3>
           <model-viewer src="Assets/Models/DashCover-16TigeR22.glb"
                         poster="Assets/Images/DashCover-16Tige'R22frontopen.jpg"
-                        camera-controls shadow-intensity="1"></model-viewer>
+                        camera-controls shadow-intensity="1"
+                        style="background:linear-gradient(135deg, #0a1520 0%, #1a2535 50%, #0a1520 100%); border:2px solid #2b6fcf; box-shadow: inset 0 0 30px rgba(61,143,255,0.08);"
+                        environment-image="neutral"></model-viewer>
           <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap">
             <a class="btn" href="Portfolio/Consolecover.html">View Details</a>
           </div>
         </article>
+
+        <!-- WRX Louvers -->
+        <article class="card">
+          <h3>WRX Louvers <span style="color:var(--red-900); font-size:14px; font-weight:700;">(Concept)</span></h3>
+          <img src="Assets/Images/DashCover-16Tige'R22frontclosed.jpg" alt="WRX Louvers Concept" style="width:100%; height:320px; object-fit:cover; border-radius:14px; border:2px solid #333;">
+          <p style="font-size:14px; margin-top:8px;">Black Dragon Scale pattern. In development — preorders available.</p>
+          <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap">
+            <a class="btn" href="Portfolio/Louvers.html">View Details</a>
+          </div>
+        </article>
+
+        <!-- Welding Wire Spool Adapter -->
+        <article class="card">
+          <h3>Weld Spool Adapter</h3>
+          <img src="Assets/Images/WarCaneV2.jpg" alt="Welding Adapter" style="width:100%; height:320px; object-fit:cover; border-radius:14px; border:2px solid #333;">
+          <p style="font-size:14px; margin-top:8px;">Universal adapter for welding wire spools. Durable, quick-change design.</p>
+          <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap">
+            <a class="btn" href="Portfolio/WeldAdapter.html">View Details</a>
+          </div>
+        </article>
       </div>
+    </section>
 
     <!-- ORDERS / SERVICE -->
     <section id="orders" class="section">
